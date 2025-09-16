@@ -28,5 +28,11 @@
   "author": "you",
   "engines": {
     "node": ">=18.18.0"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "express-rate-limit": "^8.1.0",
+    "rate-limit-redis": "^4.2.2",
+    "redis": "^5.8.2"
   }
 }

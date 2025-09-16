@@ -6,3 +6,5 @@ dist
 pnpm-lock.yaml
 *.log
 .vscode
+
+/generated/prisma
