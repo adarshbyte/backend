@@ -1,0 +1,8 @@
+node_modules
+dist
+.env
+.env.*.local
+.npmrc
+pnpm-lock.yaml
+*.log
+.vscode

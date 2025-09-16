@@ -1,0 +1,32 @@
+{
+  "name": "fullstack-labs-monorepo",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*",
+    "infra"
+  ],
+  "version": "1.0.0",
+  "description": "Full-stack labs monorepo (api, worker, web, shared packages, infra)",
+  "license": "MIT",
+  "type": "commonjs",
+  "scripts": {
+    "dev": "npm run dev --workspaces --if-present",
+    "build": "npm run build --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "lint": "npm run lint --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present",
+    "infra:up": "cd infra && docker compose up -d",
+    "infra:down": "cd infra && docker compose down -v",
+    "api:dev": "npm --workspace=@fs/api run dev",
+    "api:build": "npm --workspace=@fs/api run build",
+    "api:migrate": "npm --workspace=@fs/api run db:migrate",
+    "api:push": "npm --workspace=@fs/api run db:push",
+    "api:studio": "npm --workspace=@fs/api run db:studio"
+  },
+  "keywords": [],
+  "author": "you",
+  "engines": {
+    "node": ">=18.18.0"
+  }
+}
